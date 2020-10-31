@@ -15,11 +15,10 @@ function onInputCountry(event) {
     fetch(`https://restcountries.eu/rest/v2/name/${name}`)
     .then(res => { return res.json() })
     .then(country => {
-        console.log(country)
+        // console.log(country)
         const markup = countryCard(country)
-        console.log(markup)
+        // console.log(markup)
         markapCard.innerHTML = markup
-
     })
 }
 
