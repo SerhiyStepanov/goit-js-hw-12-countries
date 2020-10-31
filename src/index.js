@@ -10,12 +10,13 @@ inputEl.addEventListener('input', debounce(onInputCountry,500))
 function onInputCountry(event) {
     const name = event.target.value
     console.log(event.target.value)
+
     fetch(`https://restcountries.eu/rest/v2/name/${name}`)
-        .then(res => { return res.json() })
+        .then(res => { return res.json()})
         .then(country => {
             console.log(country)
-            const markup = countryCard(country)
-            console.log(markup)
+            const markupCart = countryCard(country)
             
 })
 }
+
