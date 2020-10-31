@@ -1,5 +1,6 @@
 import countryCard from './template.hbs'
-import styles from './common.css'
+import styles from './styles.css'
+import fetchCountry from './fetchCountries'
 const debounce = require('lodash.debounce');
 
 const inputEl = document.querySelector('.input-control')
@@ -8,16 +9,22 @@ const markapCard = document.querySelector('.container-js')
 inputEl.addEventListener('input', debounce(onInputCountry,500))
 
 
+
 function onInputCountry(event) {
     const name = event.target.value
-    // console.log(event.target.value) 
+    // console.log(countryName)
+    fetchCountry(name)
+        .then(renderCountryCard)
+        .catch()
+        .finally()
+}
 
-    fetch(`https://restcountries.eu/rest/v2/name/${name}`)
-    .then(res => { return res.json() })
-    .then(country => {
-        // console.log(country)
-        const markup = countryCard(country)
-        // console.log(markup)
+// function fetchCountry(name) {
+//  return fetch(`https://restcountries.eu/rest/v2/name/${name}`)
+// .then(res => { return res.json()})  
+// }
+
+function renderCountryCard(country) {
+    const markup = countryCard(country)
         markapCard.innerHTML = markup
-    })
 }
