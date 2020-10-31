@@ -21,6 +21,3 @@ function onInputCountry(event) {
         markapCard.innerHTML = markup
     })
 }
-
-
-
