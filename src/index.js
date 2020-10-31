@@ -1,4 +1,5 @@
 import countryCard from './template.hbs'
+import styles from './common.css'
 const debounce = require('lodash.debounce');
 
 const inputEl = document.querySelector('.input-control')
