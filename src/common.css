@@ -3,5 +3,15 @@ body {
 }
 
 .input-control {
-  color: ;
+  color: black;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.country-img {
+  width: 320px;
 }

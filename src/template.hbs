@@ -1,3 +1,4 @@
+{{#each this}}
 <div class="country-container">
 
     <h2 class="country-title">{{name}}</h2>
@@ -10,10 +11,13 @@
 
     <p class="country-text">Population: {{population}}</p>
 
-    <ul class="country-list">Languages:
+    <p class="country-text">Languages: </p>
+
+    <ul class="country-list">
         {{#each languages}}
-        <li>{{languages.name}}</li>
+        <li>{{this.name}}</li>
         {{/each}}
     </ul>
 
 </div>
+{{/each}}
