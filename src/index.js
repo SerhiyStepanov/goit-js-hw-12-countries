@@ -1,5 +1,4 @@
 // import countryCard from './template.hbs'
-const Handlebars = require("handlebars");
 const debounce = require('lodash.debounce');
 
 
