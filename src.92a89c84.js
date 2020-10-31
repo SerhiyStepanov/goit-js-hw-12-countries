@@ -12,4 +12,4 @@ var t=arguments[3],e="Expected a function",n=NaN,r="[object Symbol]",i=/^\s+|\s+
 },{}],"Focm":[function(require,module,exports) {
 "use strict";var e=n(require("./template.hbs")),t=n(require("./common.css"));function n(e){return e&&e.__esModule?e:{default:e}}var r=require("lodash.debounce"),o=document.querySelector(".input-control"),u=document.querySelector(".container-js");function c(t){var n=t.target.value;fetch("https://restcountries.eu/rest/v2/name/".concat(n)).then(function(e){return e.json()}).then(function(t){console.log(t);var n=(0,e.default)(t);console.log(n),u.innerHTML=n})}o.addEventListener("input",r(c,500));
 },{"./template.hbs":"QM62","./common.css":"ddLP","lodash.debounce":"PZFh"}]},{},["Focm"], null)
-//# sourceMappingURL=/src.4775f0b9.js.map
+//# sourceMappingURL=/src.92a89c84.js.map
