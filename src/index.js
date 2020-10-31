@@ -1,4 +1,5 @@
-import countryCard from './template.hbs'
+// import countryCard from './template.hbs'
+const Handlebars = require("handlebars");
 const debounce = require('lodash.debounce');
 
 
@@ -15,9 +16,10 @@ function onInputCountry(event) {
     .then(res => { return res.json() })
     .then(country => {
         console.log(country)
-        const markupCart = countryCard(country)
+        // const markupCart = countryCard(country)
     })
 }
+
 
 
 
