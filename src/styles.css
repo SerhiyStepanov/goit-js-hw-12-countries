@@ -1,12 +1,14 @@
 body {
-  background-color: beige;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
 }
 
-.input-control {
+#country-name {
   min-width: 100px;
   margin-left: 20px;
   height: 20px;
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 .container-js {
@@ -20,6 +22,7 @@ body {
 
 .country-title {
   text-align: center;
+  font-size: 24px;
 }
 
 .country-content {
@@ -31,4 +34,9 @@ img {
   width: 540px;
   height: auto;
   margin-left: 50px;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 600;
 }
