@@ -1,13 +1,19 @@
 <div class="country-container">
+
     <h1 class="country-title">{{name}}</h1>
+
     <div class="country-img">
         <img src="{{flag}}" alt="{{name}}">
     </div>
+
     <p class="country-text">Capital: {{capital}}</p>
+
     <p class="country-text">Population: {{population}}</p>
+
     <ul class="country-list">Languages:
         {{#each languages}}
         <li>{{languages.name}}</li>
         {{/each}}
     </ul>
+
 </div>
