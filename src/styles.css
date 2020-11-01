@@ -8,14 +8,14 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   line-height: 1.7;
-  background-color: blanchedalmond;
+  background-color: #f1eaea;
 }
 
 #country-name {
   min-width: 100px;
   margin-left: 20px;
   height: 20px;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 .container-js {
