@@ -1,8 +1,9 @@
 import countryCard from './template.hbs'
 import fetchCountry from './fetchCountries'
-import notify from '@pnotify/core'
-const debounce = require('lodash.debounce')
+import '@pnotify/core/dist/Material.css';
+import { defaults } from '@pnotify/core';
 import './styles.css'
+const debounce = require('lodash.debounce')
 
 
 const inputEl = document.querySelector('.input-control')
@@ -10,15 +11,14 @@ const markapCard = document.querySelector('.container-js')
 
 inputEl.addEventListener('input', debounce(onInputCountry,500))
 
-notify.styling = 'material'
-notify.icons = 'material'
+defaults.styling = 'material';
+defaults.icons = 'material';
 
 function onInputCountry(event) {
     const name = event.target.value
 
     fetchCountry(name)
-        .then(renderCountryCard
-        )
+        .then(renderCountryCard)
         .catch()
         .finally()
 }
