@@ -1,8 +1,11 @@
 import countryCard from './template.hbs'
+import countryList from './template-list.hbs'
 import fetchCountry from './fetchCountries'
 import '@pnotify/core/dist/Material.css';
 import { defaults } from '@pnotify/core';
+
 import './styles.css'
+
 const debounce = require('lodash.debounce')
 
 
@@ -24,7 +27,19 @@ function onInputCountry(event) {
 }
 
 
-function renderCountryCard(country) {
-    const markup = countryCard(country)
+function renderCountryCard(countrys) {
+    const markup = countryCard(countrys)
+    console.log(countrys)
+    if (countrys.length > 10) {
+        alert("Too many matches found. Pleace enter a more specific query!")
+    }
+    if (countrys.length >= 2 && countrys.length <= 10) {
+        console.log(countryList(countrys))
+        const markupCountryList = countryList(countrys)
+        markapCard.innerHTML =markupCountryList
+    }
+    if (countrys.length === 1) {
         markapCard.innerHTML = markup
+    }
+    
 }
