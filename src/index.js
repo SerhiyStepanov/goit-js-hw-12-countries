@@ -47,5 +47,4 @@ function renderCountryCard(countrys) {
     if (countrys.length === 1) {
         markapCard.innerHTML = markup
     }
-    
 }
