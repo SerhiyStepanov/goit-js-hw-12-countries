@@ -2,10 +2,10 @@ import countryCard from './template.hbs'
 import countryList from './template-list.hbs'
 import fetchCountry from './fetchCountries'
 import '@pnotify/core/dist/Material.css';
-import { defaults } from '@pnotify/core';
+// import { defaults } from '@pnotify/core';
 import '@pnotify/core/dist/PNotify.css'
 import '@pnotify/mobile/dist/PNotifyMobile.css'
-import { alert } from '@pnotify/core/dist/PNotify.js'
+import { alert, defaultModules } from '@pnotify/core/dist/PNotify.js'
 import * as PNotifyMobile from '@pnotify/mobile/dist/PNotifyMobile.js'
 
 import './styles.css'
@@ -19,8 +19,8 @@ const markapCard = document.querySelector('.container-js')
 inputEl.addEventListener('input', debounce(onInputCountry,500))
 
 defaultModules.set(PNotifyMobile, {});
-defaults.styling = 'material';
-defaults.icons = 'material';
+styling = 'material';
+icons = 'material';
 
 function onInputCountry(event) {
     const name = event.target.value
