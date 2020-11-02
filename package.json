@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url / goit-js-hw-12-countries/",
+    "build": "parcel build src/index.html --public-url /goit-js-hw-12-countries/",
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },
@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/SerhiyStepanov/goit-js-hw-12-countries/issues"
   },
-  "homepage": "https://SerhiyStepanov.github.com/goit-js-hw-12-countries",
+  "homepage": "https://SerhiyStepanov.github.io/goit-js-hw-12-countries",
   "devDependencies": {
     "@pnotify/core": "^5.1.2",
     "parcel-bundler": "^1.12.4",
