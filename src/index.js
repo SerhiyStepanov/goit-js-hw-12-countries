@@ -19,6 +19,9 @@ defaults.icons = 'material';
 
 function onInputCountry(event) {
     const name = event.target.value
+    if (name === '') {
+        markapCard.innerHTML = ''
+    }
 
     fetchCountry(name)
         .then(renderCountryCard)
@@ -29,15 +32,16 @@ function onInputCountry(event) {
 
 function renderCountryCard(countrys) {
     const markup = countryCard(countrys)
-    console.log(countrys)
+    const markupCountryList = countryList(countrys)
+
     if (countrys.length > 10) {
         alert("Too many matches found. Pleace enter a more specific query!")
     }
+
     if (countrys.length >= 2 && countrys.length <= 10) {
-        console.log(countryList(countrys))
-        const markupCountryList = countryList(countrys)
-        markapCard.innerHTML =markupCountryList
+        markapCard.innerHTML = markupCountryList
     }
+
     if (countrys.length === 1) {
         markapCard.innerHTML = markup
     }
