@@ -24,7 +24,7 @@ function onInputCountry(event) {
     }
 
     fetchCountry(name)
-        .then(renderCountryCard)
+        .then(renderCountryCard)``
         .catch()
         .finally()
 }
