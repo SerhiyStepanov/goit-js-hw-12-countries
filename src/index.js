@@ -49,3 +49,4 @@ function renderCountryCard(countrys) {
         markapCard.innerHTML = markup
     }
 }
+
