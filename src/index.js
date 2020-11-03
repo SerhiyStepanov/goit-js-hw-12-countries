@@ -8,7 +8,7 @@ import { alert, defaultModules } from '@pnotify/core/dist/PNotify.js'
 import * as PNotifyMobile from '@pnotify/mobile/dist/PNotifyMobile.js'
 import './styles.css'
 
-const debounce = require('lodash.debounce')
+import debounce from 'lodash.debounce'
 
 
 const inputEl = document.querySelector('.input-control')
@@ -20,6 +20,7 @@ defaultModules.set(PNotifyMobile, {});
 
 function onInputCountry(event) {
     const name = event.target.value
+    console.log(name)
     if (name === '') {
         markapCard.innerHTML = ''
         return
