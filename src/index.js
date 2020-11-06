@@ -18,18 +18,33 @@ inputEl.addEventListener('input', debounce(onInputCountry,500))
 
 defaultModules.set(PNotifyMobile, {});
 
-function onInputCountry(event) {
+// function onInputCountry(event) {
+//     const name = event.target.value
+
+//     if (name === '') {
+//         markapCard.innerHTML = ''
+//         return
+//     }
+
+//     fetchCountry(name)
+//         .then(renderCountryCard)
+//         .catch()
+// }
+
+async function onInputCountry(event) {
     const name = event.target.value
-    console.log(name)
+
     if (name === '') {
         markapCard.innerHTML = ''
         return
     }
-
-    fetchCountry(name)
-        .then(renderCountryCard)
-        .catch()
-        .finally()
+    try {
+        const country = await fetchCountry(name)
+        const render = await renderCountryCard(country)
+    } catch {
+        console.log('error')
+    }
+          
 }
 
 
