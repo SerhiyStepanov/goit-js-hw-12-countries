@@ -41,10 +41,10 @@ async function onInputCountry(event) {
     try {
         const country = await fetchCountry(name)
         const render = await renderCountryCard(country)
-    } catch {
-        console.log('error')
+        // console.log(render)
+    } catch (error){
+        console.log(error)
     }
-          
 }
 
 
@@ -64,4 +64,3 @@ function renderCountryCard(countrys) {
         markapCard.innerHTML = markup
     }
 }
-
